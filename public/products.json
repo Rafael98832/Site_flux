@@ -19,8 +19,7 @@
       "technology": "Inverter",
       "voltage": "220V",
       "energyClass": "A",
-      "wifi": true,
-      "checkoutLink": "https://distribuidora.com/checkout/samsung-windfree-9000-btus"
+      "wifi": true
     },
     {
       "id": 2,
