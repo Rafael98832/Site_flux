@@ -299,7 +299,7 @@ const ProductCard = ({ product }) => {
     shortDescription, 
     type, 
     technology, 
-    image, 
+    image1,
     originalPrice, 
     price, 
     pixPrice,
@@ -333,7 +333,7 @@ const ProductCard = ({ product }) => {
         <StockLabel inStock={inStock}>
           {inStock ? 'EM ESTOQUE' : 'ESGOTADO'}
         </StockLabel>
-        <ProductImage src={image || 'https://via.placeholder.com/300x300?text=Ar+Condicionado'} alt={name} />
+        <ProductImage src={image1 || 'https://via.placeholder.com/300x300?text=Ar+Condicionado'} alt={name} />
       </ImageContainer>
       
       <Content>

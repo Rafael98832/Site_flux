@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import ProductDetails from './pages/ProductDetails'
 import Category from './pages/Category'
+import Products from './pages/Products'
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
@@ -92,6 +93,7 @@ function App() {
       <MainContainer>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/category/:categoryName" element={<Category />} />
           <Route path="/category/:categoryName/:capacity" element={<Category />} />

@@ -799,7 +799,10 @@ const ProductDetails = () => {
     originalPrice,
     price,
     pixPrice,
-    image,
+    image1,
+    image2,
+    image3,
+    image4,
     category,
     capacity,
     inStock,
@@ -830,12 +833,13 @@ const ProductDetails = () => {
     window.open(contactLink, '_blank');
   };
 
-  // Simula múltiplas imagens (na versão real, o produto teria um array de imagens)
+  // Cria array de imagens baseado nas propriedades image1, image2, image3, image4
   const productImages = [
-    image || 'https://via.placeholder.com/500x500?text=Ar+Condicionado',
-    'https://via.placeholder.com/500x500?text=Vista+Lateral',
-    'https://via.placeholder.com/500x500?text=Vista+Traseira'
-  ];
+    image1 || 'https://via.placeholder.com/500x500?text=Ar+Condicionado',
+    image2 || 'https://via.placeholder.com/500x500?text=Vista+Lateral',
+    image3 || 'https://via.placeholder.com/500x500?text=Vista+Traseira',
+    image4 || 'https://via.placeholder.com/500x500?text=Vista+Detalhes'
+  ].filter(img => img); // Remove imagens vazias
 
   return (
     <Container>
@@ -1078,7 +1082,7 @@ const ProductDetails = () => {
                 <RelatedCard key={relatedProduct.id} to={`/product/${relatedProduct.id}`}>
                   <RelatedImage>
                     <img 
-                      src={relatedProduct.image || 'https://via.placeholder.com/150x150?text=Ar+Condicionado'} 
+                      src={relatedProduct.image1 || 'https://via.placeholder.com/150x150?text=Ar+Condicionado'} 
                       alt={relatedProduct.name} 
                     />
                   </RelatedImage>

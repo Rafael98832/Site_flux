@@ -508,9 +508,7 @@ const Home = () => {
         
         <SectionTitle>
           Ofertas Imperdíveis
-          <SeeAllLink to="/sale">
-            Ver todas <FaArrowRight />
-          </SeeAllLink>
+         
         </SectionTitle>
         <ProductGrid>
           {onSaleProducts.map(product => (

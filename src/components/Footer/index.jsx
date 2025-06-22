@@ -250,7 +250,7 @@ const PaymentTitle = styled.h5`
   font-size: 16px;
   margin-bottom: 15px;
   font-weight: 600;
-  
+  color: white;
   @media (max-width: 768px) {
     font-size: 14px;
   }
