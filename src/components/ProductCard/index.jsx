@@ -286,9 +286,13 @@ const DetailsButton = styled(Button)`
   background-color: white;
   color: var(--primary);
   border: 1px solid var(--primary);
+  transition: all 0.3s ease;
   
   &:hover {
-    background-color: #f0f7ff;
+    background-color: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 102, 204, 0.3);
   }
 `;
 

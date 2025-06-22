@@ -722,9 +722,20 @@ const BackToProducts = styled(Link)`
   text-decoration: none;
   margin-bottom: 15px;
   font-weight: 500;
+  transition: all 0.3s ease;
   
   &:hover {
-    text-decoration: underline;
+    color: #005bb9;
+    transform: translateX(-3px);
+    text-decoration: none;
+    
+    svg {
+      transform: translateX(-2px);
+    }
+  }
+  
+  svg {
+    transition: transform 0.3s ease;
   }
   
   @media (max-width: 768px) {
@@ -829,7 +840,7 @@ const ProductDetails = () => {
   // Função para lidar com o clique no botão de contato
   const handleContactClick = () => {
     // Link que será definido posteriormente
-    const contactLink = "https://wa.me/5511999999999?text=Olá,%20tenho%20interesse%20no%20produto%20" + encodeURIComponent(name);
+    const contactLink = `https://wa.me/5511975513198?text=Olá,%20tenho%20interesse%20no%20produto%20%${name}` ;
     window.open(contactLink, '_blank');
   };
 

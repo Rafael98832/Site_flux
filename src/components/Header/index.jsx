@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { FaUser, FaShoppingCart, FaSearch, FaPhone, FaHeart, FaBars, FaTimes } from 'react-icons/fa';
+import { FaUser, FaShoppingCart, FaSearch, FaPhone, FaHeart, FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
 
 
 const HeaderContainer = styled.header`
@@ -41,6 +41,9 @@ const MainContent = styled.div`
 `;
 
 const Logo = styled(Link)`
+  display: flex;
+  align-items: center;
+  gap: 12px;
   font-size: 28px;
   font-weight: 800;
   color: #f3f3f3;
@@ -55,6 +58,16 @@ const Logo = styled(Link)`
   
   @media (max-width: 480px) {
     font-size: 16px;
+  }
+`;
+
+const LogoImage = styled.img`
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  
+  @media (max-width: 480px) {
+    height: 30px;
   }
 `;
 
@@ -266,6 +279,139 @@ const NavLink = styled(Link)`
   }
 `;
 
+const DropdownItem = styled.div`
+  position: relative;
+  
+  @media (max-width: 992px) {
+    width: 100%;
+  }
+`;
+
+const DropdownButton = styled.button`
+  color: var(--white);
+  background: none;
+  border: none;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  transition: var(--transition-normal);
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: var(--white);
+    transition: var(--transition-normal);
+    transform: translateX(-50%);
+  }
+  
+  &:hover::after {
+    width: 80%;
+  }
+  
+  svg {
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover svg {
+    transform: rotate(180deg);
+  }
+  
+  @media (max-width: 992px) {
+    padding: 15px;
+    justify-content: space-between;
+    width: 100%;
+  }
+`;
+
+const DropdownMenu = styled.div`
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--white);
+  min-width: 200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  
+  ${DropdownItem}:hover & {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  @media (max-width: 992px) {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.1);
+    margin-top: 10px;
+  }
+`;
+
+const DropdownLink = styled(Link)`
+  display: block;
+  padding: 12px 20px;
+  color: var(--text-dark);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  text-transform: none;
+  
+  &:hover {
+    background: var(--bg-light);
+    color: var(--kabum-orange);
+    padding-left: 25px;
+  }
+  
+  &:first-child {
+    border-radius: 8px 8px 0 0;
+  }
+  
+  &:last-child {
+    border-radius: 0 0 8px 8px;
+  }
+  
+  @media (max-width: 992px) {
+    color: var(--white);
+    padding: 8px 20px;
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--white);
+      padding-left: 25px;
+    }
+    
+    &:first-child,
+    &:last-child {
+      border-radius: 0;
+    }
+  }
+`;
+
 
 
 const MobileMenuButton = styled.button`
@@ -296,7 +442,10 @@ const Header = () => {
       
       <MainHeader>
         <MainContent>
-          <Logo to="/">DISTRIBUIDORA MARKETPLACE</Logo>
+          <Logo to="/">
+            <LogoImage src="/ar.png" alt="Logo" />
+            DISTRIBUIDORA MARKETPLACE
+          </Logo>
 
         </MainContent>
       </MainHeader>
@@ -307,17 +456,19 @@ const Header = () => {
             {mobileMenuOpen ? <FaTimes /> : <FaBars />}
           </MobileMenuButton>
           <NavList isOpen={mobileMenuOpen}>
+            <DropdownItem>
+              <DropdownButton>
+                Categorias <FaChevronDown />
+              </DropdownButton>
+              <DropdownMenu>
+                <DropdownLink to="/category/split-inverter/9000">9.000 BTUs</DropdownLink>
+                <DropdownLink to="/category/split-inverter/12000">12.000 BTUs</DropdownLink>
+                <DropdownLink to="/category/split-inverter/18000">18.000 BTUs</DropdownLink>
+                <DropdownLink to="/category/split-inverter/24000">24.000 BTUs</DropdownLink>
+              </DropdownMenu>
+            </DropdownItem>
             <NavItem>
-              <NavLink to="/category/split-inverter/9000">9.000 BTUs</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink to="/category/split-inverter/12000">12.000 BTUs</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink to="/category/split-inverter/18000">18.000 BTUs</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink to="/category/split-inverter/24000">24.000 BTUs</NavLink>
+              <NavLink to="/products">Todos os Produtos</NavLink>
             </NavItem>
           </NavList>
         </NavContent>

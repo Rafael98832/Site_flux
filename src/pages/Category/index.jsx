@@ -189,92 +189,42 @@ const NoResults = styled.div`
 const Category = () => {
   const { categoryName, capacity } = useParams();
   const [filteredProducts, setFilteredProducts] = useState([]);
-  const [filters, setFilters] = useState({
-    capacity: capacity || '',
-    type: '',
-    technology: '',
-    voltage: '',
-    energyClass: '',
-    wifi: '',
-    inStock: ''
-  });
   const { productsData, loading, error } = useProducts();
 
   // Decodifica o nome da categoria da URL
   const decodedCategoryName = categoryName?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
 
   useEffect(() => {
-    if (productsData) {
-      filterProducts();
-    }
-  }, [categoryName, capacity, filters, productsData]);
-
-  const filterProducts = () => {
     if (!productsData) return;
     
-    let filtered = productsData.products.filter(product => {
+    const filtered = productsData.products.filter(product => {
       // Filtro por categoria
       const categoryMatch = !categoryName || 
         product.category.toLowerCase().replace(/\s+/g, '-') === categoryName.toLowerCase();
       
-      // Filtro por capacidade
-      const capacityMatch = !filters.capacity || 
-        product.capacity.toLowerCase().includes(filters.capacity.toLowerCase());
-      
-      // Filtro por tipo
-      const typeMatch = !filters.type || product.type === filters.type;
-      
-      // Filtro por tecnologia
-      const technologyMatch = !filters.technology || product.technology === filters.technology;
-      
-      // Filtro por voltagem
-      const voltageMatch = !filters.voltage || product.voltage === filters.voltage;
-      
-      // Filtro por classe energética
-      const energyMatch = !filters.energyClass || product.energyClass === filters.energyClass;
-      
-      // Filtro por WiFi
-      const wifiMatch = !filters.wifi || product.wifi.toString() === filters.wifi;
-      
-      // Filtro por estoque
-      const stockMatch = !filters.inStock || product.inStock.toString() === filters.inStock;
+      // Filtro por capacidade - apenas se há capacidade na URL
+      const capacityMatch = !capacity || (() => {
+        // Remove pontos e espaços, depois extrai o número completo
+        const urlCapacityClean = capacity.replace(/\./g, '');
+        const productCapacityClean = product.capacity.replace(/\./g, '');
+        
+        const urlCapacityNumbers = urlCapacityClean.match(/\d+/g);
+        const productCapacityNumbers = productCapacityClean.match(/\d+/g);
+        
+        if (!urlCapacityNumbers || !productCapacityNumbers) return false;
+        
+        // Compara o primeiro número (BTUs principais)
+        const urlBTUs = parseInt(urlCapacityNumbers[0]);
+        const productBTUs = parseInt(productCapacityNumbers[0]);
+        console.log(urlBTUs, productBTUs);
+        return urlBTUs === productBTUs;
+      })();
 
-      return categoryMatch && capacityMatch && typeMatch && technologyMatch && 
-             voltageMatch && energyMatch && wifiMatch && stockMatch;
+      return categoryMatch && capacityMatch;
     });
 
     setFilteredProducts(filtered);
-  };
-
-  const handleFilterChange = (filterName, value) => {
-    setFilters(prev => ({
-      ...prev,
-      [filterName]: value
-    }));
-  };
-
-  const clearFilters = () => {
-    setFilters({
-      capacity: capacity || '',
-      type: '',
-      technology: '',
-      voltage: '',
-      energyClass: '',
-      wifi: '',
-      inStock: ''
-    });
-  };
-
-  // Obter valores únicos para os filtros baseados na categoria atual
-  const categoryProducts = productsData ? productsData.products.filter(product => 
-    !categoryName || product.category.toLowerCase().replace(/\s+/g, '-') === categoryName.toLowerCase()
-  ) : [];
-
-  const uniqueCapacities = [...new Set(categoryProducts.map(p => p.capacity))].sort();
-  const uniqueTypes = [...new Set(categoryProducts.map(p => p.type))].sort();
-  const uniqueTechnologies = [...new Set(categoryProducts.map(p => p.technology))].sort();
-  const uniqueVoltages = [...new Set(categoryProducts.map(p => p.voltage))].sort();
-  const uniqueEnergyClasses = [...new Set(categoryProducts.map(p => p.energyClass))].sort();
+  }, [categoryName, capacity, productsData]);
 
   if (loading) {
     return (
@@ -328,100 +278,7 @@ const Category = () => {
         </ResultsCount>
       </ResultsInfo>
 
-      <FilterContainer>
-        <FilterGroup>
-          <FilterLabel>Capacidade (BTUs)</FilterLabel>
-          <FilterSelect 
-            value={filters.capacity} 
-            onChange={(e) => handleFilterChange('capacity', e.target.value)}
-          >
-            <option value="">Todas as capacidades</option>
-            {uniqueCapacities.map(capacity => (
-              <option key={capacity} value={capacity}>{capacity}</option>
-            ))}
-          </FilterSelect>
-        </FilterGroup>
 
-        <FilterGroup>
-          <FilterLabel>Tipo</FilterLabel>
-          <FilterSelect 
-            value={filters.type} 
-            onChange={(e) => handleFilterChange('type', e.target.value)}
-          >
-            <option value="">Todos os tipos</option>
-            {uniqueTypes.map(type => (
-              <option key={type} value={type}>{type}</option>
-            ))}
-          </FilterSelect>
-        </FilterGroup>
-
-        <FilterGroup>
-          <FilterLabel>Tecnologia</FilterLabel>
-          <FilterSelect 
-            value={filters.technology} 
-            onChange={(e) => handleFilterChange('technology', e.target.value)}
-          >
-            <option value="">Todas as tecnologias</option>
-            {uniqueTechnologies.map(tech => (
-              <option key={tech} value={tech}>{tech}</option>
-            ))}
-          </FilterSelect>
-        </FilterGroup>
-
-        <FilterGroup>
-          <FilterLabel>Voltagem</FilterLabel>
-          <FilterSelect 
-            value={filters.voltage} 
-            onChange={(e) => handleFilterChange('voltage', e.target.value)}
-          >
-            <option value="">Todas as voltagens</option>
-            {uniqueVoltages.map(voltage => (
-              <option key={voltage} value={voltage}>{voltage}</option>
-            ))}
-          </FilterSelect>
-        </FilterGroup>
-
-        <FilterGroup>
-          <FilterLabel>Classe Energética</FilterLabel>
-          <FilterSelect 
-            value={filters.energyClass} 
-            onChange={(e) => handleFilterChange('energyClass', e.target.value)}
-          >
-            <option value="">Todas as classes</option>
-            {uniqueEnergyClasses.map(energyClass => (
-              <option key={energyClass} value={energyClass}>Classe {energyClass}</option>
-            ))}
-          </FilterSelect>
-        </FilterGroup>
-
-        <FilterGroup>
-          <FilterLabel>Wi-Fi</FilterLabel>
-          <FilterSelect 
-            value={filters.wifi} 
-            onChange={(e) => handleFilterChange('wifi', e.target.value)}
-          >
-            <option value="">Com ou sem Wi-Fi</option>
-            <option value="true">Com Wi-Fi</option>
-            <option value="false">Sem Wi-Fi</option>
-          </FilterSelect>
-        </FilterGroup>
-
-        <FilterGroup>
-          <FilterLabel>Disponibilidade</FilterLabel>
-          <FilterSelect 
-            value={filters.inStock} 
-            onChange={(e) => handleFilterChange('inStock', e.target.value)}
-          >
-            <option value="">Todos os produtos</option>
-            <option value="true">Em estoque</option>
-            <option value="false">Esgotado</option>
-          </FilterSelect>
-        </FilterGroup>
-
-        <ClearFiltersButton onClick={clearFilters}>
-          <FaFilter /> Limpar Filtros
-        </ClearFiltersButton>
-      </FilterContainer>
 
       {filteredProducts.length > 0 ? (
         <ProductGrid>
@@ -432,7 +289,7 @@ const Category = () => {
       ) : (
         <NoResults>
           <h3>Nenhum produto encontrado</h3>
-          <p>Tente ajustar os filtros para encontrar o produto que você procura.</p>
+          <p>Não há produtos disponíveis para esta categoria e capacidade.</p>
         </NoResults>
       )}
     </CategoryContainer>
