@@ -318,10 +318,7 @@ const ProductCard = ({ product }) => {
     });
   };
 
-  const handleBuyClick = () => {
-    // Redireciona para a página do produto
-    window.location.href = `/product/${id}`;
-  };
+
 
   // Calcula o percentual de desconto
   const discountPercentage = Math.round(((originalPrice - price) / originalPrice) * 100);
@@ -368,7 +365,8 @@ const ProductCard = ({ product }) => {
           
           <ButtonsContainer>
             <BuyButton 
-              onClick={handleBuyClick} 
+              as={Link} 
+              to={`/product/${id}`}
               disabled={!inStock}
             >
               {inStock ? 'Comprar' : 'Esgotado'}
