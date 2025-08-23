@@ -132,7 +132,8 @@ const BannerButton = styled(Link)`
 const BannerImage = styled.img`
   width: 100%;
   height: auto;
-  object-fit: contain;
+  max-height: 500px;
+  object-fit: fill;
   object-position: center;
   display: block;
   
@@ -469,24 +470,40 @@ const Home = () => {
   if (!productsData) return <div>Nenhum produto encontrado</div>;
   
   const { products } = productsData;
-  const featuredProducts = products.slice(0, 3);
-  const onSaleProducts = [...products].sort((a, b) => 
-    ((a.originalPrice - a.price) / a.originalPrice) - ((b.originalPrice - b.price) / b.originalPrice)
-  ).slice(0, 3);
+  
+  // Separar produtos por tipo
+  const sofas = products.filter(product => product.productType === 'Móveis' && product.category === 'Sofás');
+  const airConditioners = products.filter(product => product.productType === 'Ar-condicionado');
+  
+  // Produtos em destaque: 2 sofás + 1 ar-condicionado
+  const featuredSofas = sofas.slice(0, 2);
+  const featuredAirConditioner = airConditioners.slice(0, 1);
+  const featuredProducts = [...featuredSofas, ...featuredAirConditioner];
+  
+  // Ofertas: priorizar sofás com maior desconto
+  const sofasOnSale = [...sofas].sort((a, b) => 
+    ((b.originalPrice - b.price) / b.originalPrice) - ((a.originalPrice - a.price) / a.originalPrice)
+  ).slice(0, 2);
+  
+  const airConditionersOnSale = [...airConditioners].sort((a, b) => 
+    ((b.originalPrice - b.price) / b.originalPrice) - ((a.originalPrice - a.price) / a.originalPrice)
+  ).slice(0, 1);
+  
+  const onSaleProducts = [...sofasOnSale, ...airConditionersOnSale];
   
   return (
     <HomeContainer>
       <Banner>
         <BannerContent>
           <BannerInfo>
-            <BannerTitle>AR CONDICIONADO com 15% de Desconto à Vista no PIX</BannerTitle>
+            <BannerTitle>SOFÁS E MÓVEIS com 15% de Desconto à Vista no PIX</BannerTitle>
             <BannerText>
-              Economize energia e tenha o máximo de conforto térmico com os melhores aparelhos do mercado. Entrega rápida para todo o Brasil.
+              Transforme sua casa com sofás de qualidade superior e móveis que combinam conforto, estilo e durabilidade. Entrega rápida para todo o Brasil.
             </BannerText>
-            <BannerButton to="/category/split-inverter">Ver Ofertas</BannerButton>
+            <BannerButton to="/category/moveis/sofa">Ver Sofás</BannerButton>
           </BannerInfo>
         </BannerContent>
-        <BannerImage src={bannerImage} alt="Banner Ar Condicionado" />
+        <BannerImage src={bannerImage} alt="Banner Sofás e Móveis" />
       </Banner>
       
       <ContentContainer>
@@ -507,8 +524,21 @@ const Home = () => {
         <SectionDivider />
         
         <SectionTitle>
+          Sofás em Destaque
+          <SeeAllLink to="/category/moveis/sofa">
+            Ver todos os sofás <FaArrowRight />
+          </SeeAllLink>
+        </SectionTitle>
+        <ProductGrid>
+          {sofas.slice(0, 3).map(product => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </ProductGrid>
+        
+        <SectionDivider />
+        
+        <SectionTitle>
           Ofertas Imperdíveis
-         
         </SectionTitle>
         <ProductGrid>
           {onSaleProducts.map(product => (
@@ -526,7 +556,7 @@ const Home = () => {
                 <FaAward />
               </BenefitIcon>
               <BenefitCardTitle>Garantia de Qualidade</BenefitCardTitle>
-              <BenefitText>Garantimos a instalação do seu produto comprado com uma equipe técnica de alta qualidade.</BenefitText>
+              <BenefitText>Produtos com garantia estendida e equipe especializada para instalação e montagem.</BenefitText>
             </BenefitCard>
             
             <BenefitCard>
@@ -534,15 +564,15 @@ const Home = () => {
                 <FaTools />
               </BenefitIcon>
               <BenefitCardTitle>Assistência Técnica</BenefitCardTitle>
-              <BenefitText>Temos uma equipe destacada para a manutenção dos seus aparelhos. Atendimento em todo o Brasil.</BenefitText>
+              <BenefitText>Equipe especializada para manutenção de ar-condicionados e suporte pós-venda para móveis. Atendimento em todo o Brasil.</BenefitText>
             </BenefitCard>
             
             <BenefitCard>
               <BenefitIcon>
                 <FaCalculator />
               </BenefitIcon>
-              <BenefitCardTitle>Calculadora de Consumo</BenefitCardTitle>
-              <BenefitText>Calcule facilmente quanto seu ar condicionado consome de energia e economize na conta de luz.</BenefitText>
+              <BenefitCardTitle>Consultoria Especializada</BenefitCardTitle>
+              <BenefitText>Ajudamos você a escolher o produto ideal para seu espaço, seja ar-condicionado ou móveis.</BenefitText>
             </BenefitCard>
             
             <BenefitCard>

@@ -192,35 +192,54 @@ const Category = () => {
   const { productsData, loading, error } = useProducts();
 
   // Decodifica o nome da categoria da URL
-  const decodedCategoryName = categoryName?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+  const getDisplayCategoryName = () => {
+    if (categoryName === 'ar-condicionado') {
+      return capacity ? `Ar-condicionados ${capacity} BTUs` : 'Ar-condicionados';
+    } else if (categoryName === 'moveis') {
+      return capacity === 'sofa' ? 'Sofás' : 'Móveis';
+    } else {
+      return categoryName?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    }
+  };
+  
+  const decodedCategoryName = getDisplayCategoryName();
 
   useEffect(() => {
     if (!productsData) return;
     
     const filtered = productsData.products.filter(product => {
-      // Filtro por categoria
-      const categoryMatch = !categoryName || 
-        product.category.toLowerCase().replace(/\s+/g, '-') === categoryName.toLowerCase();
-      
-      // Filtro por capacidade - apenas se há capacidade na URL
-      const capacityMatch = !capacity || (() => {
-        // Remove pontos e espaços, depois extrai o número completo
-        const urlCapacityClean = capacity.replace(/\./g, '');
-        const productCapacityClean = product.capacity.replace(/\./g, '');
+      // Filtro por tipo de produto (ar-condicionado ou móveis)
+      if (categoryName === 'ar-condicionado') {
+        if (product.productType !== 'Ar-condicionado') return false;
         
-        const urlCapacityNumbers = urlCapacityClean.match(/\d+/g);
-        const productCapacityNumbers = productCapacityClean.match(/\d+/g);
+        // Filtro por capacidade BTU para ar-condicionados
+        if (capacity) {
+          const urlCapacityClean = capacity.replace(/\./g, '');
+          const productCapacityClean = product.capacity.replace(/\./g, '');
+          
+          const urlCapacityNumbers = urlCapacityClean.match(/\d+/g);
+          const productCapacityNumbers = productCapacityClean.match(/\d+/g);
+          
+          if (!urlCapacityNumbers || !productCapacityNumbers) return false;
+          
+          const urlBTUs = parseInt(urlCapacityNumbers[0]);
+          const productBTUs = parseInt(productCapacityNumbers[0]);
+          
+          return urlBTUs === productBTUs;
+        }
+        return true;
+      } else if (categoryName === 'moveis') {
+        if (product.productType !== 'Móveis') return false;
         
-        if (!urlCapacityNumbers || !productCapacityNumbers) return false;
-        
-        // Compara o primeiro número (BTUs principais)
-        const urlBTUs = parseInt(urlCapacityNumbers[0]);
-        const productBTUs = parseInt(productCapacityNumbers[0]);
-        console.log(urlBTUs, productBTUs);
-        return urlBTUs === productBTUs;
-      })();
-
-      return categoryMatch && capacityMatch;
+        // Filtro por subcategoria de móveis (ex: sofá)
+        if (capacity === 'sofa') {
+          return product.category.toLowerCase() === 'sofás';
+        }
+        return true;
+      } else {
+        // Filtro por categoria específica (para compatibilidade com URLs antigas)
+        return product.category.toLowerCase().replace(/\s+/g, '-') === categoryName.toLowerCase();
+      }
     });
 
     setFilteredProducts(filtered);
@@ -265,10 +284,14 @@ const Category = () => {
       <CategoryHeader>
         <CategoryTitle>
           {decodedCategoryName}
-          {capacity && ` - ${capacity}`}
         </CategoryTitle>
         <CategorySubtitle>
-          Encontre o ar-condicionado ideal para o seu ambiente
+          {categoryName === 'ar-condicionado' 
+            ? 'Encontre o ar-condicionado ideal para o seu ambiente'
+            : categoryName === 'moveis'
+            ? 'Encontre o móvel perfeito para sua casa'
+            : 'Produtos de qualidade para você'
+          }
         </CategorySubtitle>
       </CategoryHeader>
 

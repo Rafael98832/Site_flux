@@ -168,6 +168,8 @@ const Products = () => {
     wifi: '',
     inStock: ''
   });
+  
+  const [sortBy, setSortBy] = useState('price-asc'); // Ordenar por preço crescente por padrão
 
   if (loading) {
     return (
@@ -209,6 +211,22 @@ const Products = () => {
            energyMatch && wifiMatch && stockMatch;
   });
 
+  // Ordenar produtos
+  const sortedProducts = [...filteredProducts].sort((a, b) => {
+    switch (sortBy) {
+      case 'price-asc':
+        return a.price - b.price;
+      case 'price-desc':
+        return b.price - a.price;
+      case 'name-asc':
+        return a.name.localeCompare(b.name);
+      case 'name-desc':
+        return b.name.localeCompare(a.name);
+      default:
+        return a.price - b.price; // padrão: preço crescente
+    }
+  });
+
   // Obter valores únicos para os filtros
   const uniqueCategories = [...new Set(products.map(p => p.category))].sort();
   const uniqueTypes = [...new Set(products.map(p => p.type))].sort();
@@ -244,7 +262,7 @@ const Products = () => {
       <PageHeader>
         <PageTitle>Todos os Produtos</PageTitle>
         <PageSubtitle>
-          Explore nossa linha completa de ar-condicionados com as melhores marcas e tecnologias
+          Explore nossa linha completa de ar-condicionados e móveis com as melhores marcas e tecnologias
         </PageSubtitle>
       </PageHeader>
 
@@ -338,6 +356,19 @@ const Products = () => {
           </FilterSelect>
         </FilterGroup>
 
+        <FilterGroup>
+          <FilterLabel>Ordenar por</FilterLabel>
+          <FilterSelect 
+            value={sortBy} 
+            onChange={(e) => setSortBy(e.target.value)}
+          >
+            <option value="price-asc">Menor preço</option>
+            <option value="price-desc">Maior preço</option>
+            <option value="name-asc">Nome A-Z</option>
+            <option value="name-desc">Nome Z-A</option>
+          </FilterSelect>
+        </FilterGroup>
+
         <ClearFiltersButton onClick={clearFilters}>
           Limpar Filtros
         </ClearFiltersButton>
@@ -345,13 +376,13 @@ const Products = () => {
 
       <ResultsInfo>
         <ResultsCount>
-          {filteredProducts.length} produto{filteredProducts.length !== 1 ? 's' : ''} encontrado{filteredProducts.length !== 1 ? 's' : ''}
+          {sortedProducts.length} produto{sortedProducts.length !== 1 ? 's' : ''} encontrado{sortedProducts.length !== 1 ? 's' : ''}
         </ResultsCount>
       </ResultsInfo>
 
-      {filteredProducts.length > 0 ? (
+      {sortedProducts.length > 0 ? (
         <ProductGrid>
-          {filteredProducts.map(product => (
+          {sortedProducts.map(product => (
             <ProductCard key={product.id} product={product} />
           ))}
         </ProductGrid>

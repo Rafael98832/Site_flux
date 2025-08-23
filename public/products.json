@@ -1,7 +1,12 @@
 {
+  "productTypes": [
+    "Ar-condicionado",
+    "Móveis"
+  ],
   "products": [
     {
       "id": 1,
+      "productType": "Ar-condicionado",
       "name": "Ar-condicionado Split Inverter 9000 Btus Springer Midea Xtreme Save Connect High Wall Quente e Frio",
       "shortDescription": "Climatização sem vento direto, máximo conforto",
       "image1": "https://m.media-amazon.com/images/I/61mtJwTCzkL._AC_SX679_.jpg",
@@ -23,6 +28,7 @@
     },
     {
       "id": 2,
+      "productType": "Ar-condicionado",
       "name": "Ar Condicionado Split Hi Wall Inverter Elgin Eco 9000 Btus",
       "shortDescription": "Climatização sem vento direto, máximo conforto",
       "image1": "https://m.media-amazon.com/images/I/61z2qhF07pL._AC_SX679_.jpg",
@@ -45,6 +51,7 @@
     },
     {
       "id": 3,
+      "productType": "Ar-condicionado",
       "name": "Ar Condicionado Hi Wall LG Dual Inverter Voice 9.000 Btus Frio 220v",
       "shortDescription": "Máxima economia com alto desempenho",
       "image1": "https://m.media-amazon.com/images/I/61aXaKq7MLL._AC_SX679_.jpg",
@@ -67,6 +74,7 @@
     },
     {
       "id": 4,
+      "productType": "Ar-condicionado",
       "name": "Ar-condicionado Split Inverter 9000 Btus Samsung Windfree Ai Wi-fi High Wall",
       "shortDescription": "Potente e econômico para ambientes maiores",
       "image1": "https://m.media-amazon.com/images/I/61-+nVYlnvL._AC_SX522_.jpg",
@@ -89,6 +97,7 @@
     },
     {
       "id": 5,
+      "productType": "Ar-condicionado",
       "name": "Ar-condicionado Split Inverter 12000 Btus Springer Midea Xtreme Save Connect High Wall",
       "shortDescription": "Solução para climatizar múltiplos ambientes",
       "description": "O Ar-Condicionado Split Inverter Springer Midea Xtreme Save Connect High Wall oferece um avanço notável em conforto climático e eficiência energética. Com conectividade Wi-Fi, o usuário pode controlar o ambiente por meio do aplicativo SmartHome, monitorando o consumo de energia e recebendo alertas no celular. O aparelho ajusta automaticamente a temperatura com base na geolocalização do celular e também é compatível com comandos de voz via Google Assistant ou Alexa. Destacam-se recursos como o modo Turbo para rápida refrigeração, placa Inverter com cobertura em acrílico para proteção em regiões costeiras, e tecnologia Gold Fin na condensadora para maior durabilidade. A função Eco Noite economiza até 70% de energia, enquanto o sistema AIR MAGIC oferece tripla filtragem e ionização do ar. Utiliza o fluido refrigerante ecológico R32 para menor impacto ambiental. O controle remoto possui backlight e indicador de carga da bateria, com opção de bloqueio de teclas específicas. As aletas horizontais oscilantes permitem um direcionamento eficiente do ar, e há 5 modos de operação e 5 velocidades de ventilação disponíveis para todas as estações.",
@@ -111,6 +120,7 @@
     },
     {
       "id": 6,
+      "productType": "Ar-condicionado",
       "name": "Ar Condicionado Split Hi Wall Inverter Elgin Eco 12000 Btus",
       "shortDescription": "Climatização sem vento direto, máximo conforto",
       "description": "Elgin Eco é uma revolução em climatização residencial, oferecendo controle total na ponta dos dedos com Wi-Fi integrado para ajustes personalizados via smartphone. Destacando-se pela inovação e praticidade, este ar-condicionado proporciona comodidade máxima. Com Classificação A no INMETRO, o Split Inverter II Elgin Eco proporciona economia energética, estabilidade térmica e longa vida útil, usando o gás ecológico R32 para respeitar o meio ambiente, mais economia, menor oscilação de temperatura e maior durabilidade.Gás Ecológico R32: Compromisso ambiental, sem agredir a camada de ozônio e baixo potencial de aquecimento global.Display Invisível: Indicação de temperatura que se acende ao ligar e pode ser desligado para um ambiente tranquilo durante a noite.Controle Remoto Iluminado: Design moderno e visor iluminado para uso em ambientes com baixa luminosidade.Wi-Fi Integrado: Controle remoto via dispositivos móveis ou computadores para ajustes de temperatura de qualquer lugar com acesso à internet.",
@@ -133,6 +143,7 @@
     },
     {
       "id": 7,
+      "productType": "Ar-condicionado",
       "name": "Ar Condicionado Hi Wall LG Dual Inverter Voice 12.000 Btus 220v",
       "shortDescription": "Solução elegante para ambientes comerciais",
       "description": "Conectividade e Controle por Voz Conte com um pacote completo de conectividade para tornar a sua rotina e a sua casa ainda mais inteligentes. Com o app LG ThinQ você pode ligar o ar-condicionado antes de chegar em casa ou até mesmo monitorar o quanto de energia elétrica seu ar-condicionado consumiu. Baixe o app LG ThinQ e descubra novas experiências. IA - Inteligência Artificial: Tenha mais comodidade na sua rotina com a Inteligência Artificial que entende os seus padrões de uso e as condições do ambiente e ajusta automaticamente a climatização perfeita para você. Para acionar a Inteligência Artificial basta clicar no botão SmartCare no controle remoto do ar-condicionado e pronto! As configurações do aparelho serão personalizadas para você a partir dos seus dados de uso e do escaneamento da temperatura do ambiente. Controlador de Consumo de Energia Você decide a quantidade de energia elétrica que seu ar condicionado consome. Economize energia acionando a função Active Energy Control direto no controle remoto e reduza o consumo de energia elétrica do seu ar condicionado em 4 níveis: 100%, 80%, 60% e 40%. Assim, quanto menor o percentual de consumo, mais economia você tem! Durabilidade 360°: Proteção completa por dentro e por fora. As condensadoras LG contam com a poderosa serpentina de cobre GoldFin2, que protege o equipamento contra as ações corrosivas do dia-a-dia, incluindo a maresia. Além disso, possui proteção contra picos de energia de até 450V. Só a marca líder de vendas em ar-condicionado no Brasil oferece a você um conjunto completo de proteções. ",
@@ -155,6 +166,7 @@
     },
     {
       "id": 8,
+      "productType": "Ar-condicionado",
       "name": "Ar-condicionado Split Inverter 12000 Btus Samsung Windfree Ai Wi-fi High Wall",
       "shortDescription": "Inteligência artificial e conectividade avançada",
       "description": "O Ar-Condicionado Split Inverter 12000 BTUs Samsung WindFree AI Wi-Fi High Wall Só Frio é uma opção inovadora para quem busca conforto, eficiência energética e tecnologia de ponta. Com o exclusivo modo WindFree, ele proporciona climatização sem vento frio, garantindo ambientes silenciosos e agradáveis. Além disso, conta com inteligência artificial, conectividade Wi-Fi, filtro antibacteriano, e funções como Auto Clean e Good Sleep, oferecendo praticidade e saúde. A economia de energia é um destaque, com até 77% de eficiência, e a instalação é 45% mais rápida. Seu design minimalista e ecológico completa a proposta de um aparelho moderno e sustentável.",
@@ -177,6 +189,7 @@
     },
     {
       "id": 9,
+      "productType": "Ar-condicionado",
       "name": "Ar-condicionado Split Inverter 18000 Btus Springer Midea Xtreme Save Connect High Wall",
       "shortDescription": "Climatização sem vento direto, máximo conforto",
       "description": "O Ar-Condicionado Split Inverter Springer Midea Xtreme Save Connect High Wall oferece um avanço notável em conforto climático e eficiência energética. Com conectividade Wi-Fi, o usuário pode controlar o ambiente por meio do aplicativo SmartHome, monitorando o consumo de energia e recebendo alertas no celular. O aparelho ajusta automaticamente a temperatura com base na geolocalização do celular e também é compatível com comandos de voz via Google Assistant ou Alexa. Destacam-se recursos como o modo Turbo para rápida refrigeração, placa Inverter com cobertura em acrílico para proteção em regiões costeiras, e tecnologia Gold Fin na condensadora para maior durabilidade. A função Eco Noite economiza até 70% de energia, enquanto o sistema AIR MAGIC oferece tripla filtragem e ionização do ar. Utiliza o fluido refrigerante ecológico R32 para menor impacto ambiental. O controle remoto possui backlight e indicador de carga da bateria, com opção de bloqueio de teclas específicas. As aletas horizontais oscilantes permitem um direcionamento eficiente do ar, e há 5 modos de operação e 5 velocidades de ventilação disponíveis para todas as estações.",
@@ -199,6 +212,7 @@
     },
     {
       "id": 10,
+      "productType": "Ar-condicionado",
       "name": "Ar Condicionado Split Hi Wall Inverter Elgin Eco 18000 Btus",
       "shortDescription": "Climatização sem vento direto, máximo conforto",
       "description": "Elgin Eco é uma revolução em climatização residencial, oferecendo controle total na ponta dos dedos com Wi-Fi integrado para ajustes personalizados via smartphone. Destacando-se pela inovação e praticidade, este ar-condicionado proporciona comodidade máxima. Com Classificação A no INMETRO, o Split Inverter II Elgin Eco proporciona economia energética, estabilidade térmica e longa vida útil, usando o gás ecológico R32 para respeitar o meio ambiente, mais economia, menor oscilação de temperatura e maior durabilidade.Gás Ecológico R32: Compromisso ambiental, sem agredir a camada de ozônio e baixo potencial de aquecimento global.Display Invisível: Indicação de temperatura que se acende ao ligar e pode ser desligado para um ambiente tranquilo durante a noite.Controle Remoto Iluminado: Design moderno e visor iluminado para uso em ambientes com baixa luminosidade.Wi-Fi Integrado: Controle remoto via dispositivos móveis ou computadores para ajustes de temperatura de qualquer lugar com acesso à internet.",
@@ -221,6 +235,7 @@
     },
     {
       "id": 11,
+      "productType": "Ar-condicionado",
       "name": "Ar Condicionado Hi Wall LG Dual Inverter Voice 18.000 Btus 220v",
       "shortDescription": "Climatização sem vento direto, máximo conforto",
       "description": "Conectividade e Controle por Voz Conte com um pacote completo de conectividade para tornar a sua rotina e a sua casa ainda mais inteligentes. Com o app LG ThinQ você pode ligar o ar-condicionado antes de chegar em casa ou até mesmo monitorar o quanto de energia elétrica seu ar-condicionado consumiu. Baixe o app LG ThinQ e descubra novas experiências. IA - Inteligência Artificial: Tenha mais comodidade na sua rotina com a Inteligência Artificial que entende os seus padrões de uso e as condições do ambiente e ajusta automaticamente a climatização perfeita para você. Para acionar a Inteligência Artificial basta clicar no botão SmartCare no controle remoto do ar-condicionado e pronto! As configurações do aparelho serão personalizadas para você a partir dos seus dados de uso e do escaneamento da temperatura do ambiente. Controlador de Consumo de Energia Você decide a quantidade de energia elétrica que seu ar condicionado consome. Economize energia acionando a função Active Energy Control direto no controle remoto e reduza o consumo de energia elétrica do seu ar condicionado em 4 níveis: 100%, 80%, 60% e 40%. Assim, quanto menor o percentual de consumo, mais economia você tem! Durabilidade 360°: Proteção completa por dentro e por fora. As condensadoras LG contam com a poderosa serpentina de cobre GoldFin2, que protege o equipamento contra as ações corrosivas do dia-a-dia, incluindo a maresia. Além disso, possui proteção contra picos de energia de até 450V.",
@@ -243,6 +258,7 @@
     },
     {
       "id": 12,
+      "productType": "Ar-condicionado",
       "name": "Ar-condicionado Split Inverter 18000 Btus Samsung Windfree Ai Wi-fi High Wall",
       "shortDescription": "Climatização sem vento direto, máximo conforto",
       "description": "O Ar-Condicionado Split Inverter 18000 BTUs Samsung WindFree AI Wi-Fi High Wall Só Frio é uma opção inovadora para quem busca conforto, eficiência energética e tecnologia de ponta. Com o exclusivo modo WindFree, ele proporciona climatização sem vento frio, garantindo ambientes silenciosos e agradáveis. Além disso, conta com inteligência artificial, conectividade Wi-Fi, filtro antibacteriano, e funções como Auto Clean e Good Sleep, oferecendo praticidade e saúde. A economia de energia é um destaque, com até 77% de eficiência, e a instalação é 45% mais rápida. Seu design minimalista e ecológico completa a proposta de um aparelho moderno e sustentável.",
@@ -265,6 +281,7 @@
     },
     {
       "id": 13,
+      "productType": "Ar-condicionado",
       "name": "Ar-condicionado Split Inverter 24000 Btus Springer Midea Xtreme Save Connect High Wall",
       "shortDescription": "Climatização sem vento direto, máximo conforto",
       "description": "O Ar-Condicionado Split Inverter Springer Midea Xtreme Save Connect High Wall oferece um avanço notável em conforto climático e eficiência energética. Com conectividade Wi-Fi, o usuário pode controlar o ambiente por meio do aplicativo SmartHome, monitorando o consumo de energia e recebendo alertas no celular. O aparelho ajusta automaticamente a temperatura com base na geolocalização do celular e também é compatível com comandos de voz via Google Assistant ou Alexa. Destacam-se recursos como o modo Turbo para rápida refrigeração, placa Inverter com cobertura em acrílico para proteção em regiões costeiras, e tecnologia Gold Fin na condensadora para maior durabilidade. A função Eco Noite economiza até 70% de energia, enquanto o sistema AIR MAGIC oferece tripla filtragem e ionização do ar. Utiliza o fluido refrigerante ecológico R32 para menor impacto ambiental. O controle remoto possui backlight e indicador de carga da bateria, com opção de bloqueio de teclas específicas. As aletas horizontais oscilantes permitem um direcionamento eficiente do ar, e há 5 modos de operação e 5 velocidades de ventilação disponíveis para todas as estações.",
@@ -287,6 +304,7 @@
     },
     {
       "id": 14,
+      "productType": "Ar-condicionado",
       "name": "Ar Condicionado Split Hi Wall Inverter Elgin Eco 24000 Btus",
       "shortDescription": "Climatização sem vento direto, máximo conforto",
       "description": "Elgin Eco é uma revolução em climatização residencial, oferecendo controle total na ponta dos dedos com Wi-Fi integrado para ajustes personalizados via smartphone. Destacando-se pela inovação e praticidade, este ar-condicionado proporciona comodidade máxima. Com Classificação A no INMETRO, o Split Inverter II Elgin Eco proporciona economia energética, estabilidade térmica e longa vida útil, usando o gás ecológico R32 para respeitar o meio ambiente, mais economia, menor oscilação de temperatura e maior durabilidade.Gás Ecológico R32: Compromisso ambiental, sem agredir a camada de ozônio e baixo potencial de aquecimento global.Display Invisível: Indicação de temperatura que se acende ao ligar e pode ser desligado para um ambiente tranquilo durante a noite.Controle Remoto Iluminado: Design moderno e visor iluminado para uso em ambientes com baixa luminosidade.Wi-Fi Integrado: Controle remoto via dispositivos móveis ou computadores para ajustes de temperatura de qualquer lugar com acesso à internet.",
@@ -306,14 +324,195 @@
       "image2": "https://m.media-amazon.com/images/I/31sYVBuzlhL._AC_SX679_.jpg",
       "image3": "https://m.media-amazon.com/images/I/41elIpbpJPL._AC_SX679_.jpg",
       "image4": "https://m.media-amazon.com/images/I/518iH0CCp-L._AC_SX679_.jpg"
-      }
+    },
+    {
+      "id": 15,
+      "productType": "Móveis",
+      "name": "Sofá 3 Lugares Retrátil e Reclinável Veludo Premium",
+      "shortDescription": "Conforto e elegância para sua sala de estar",
+      "image1": "https://images.tcdn.com.br/img/img_prod/697730/sofa_3_lugares_retratil_e_reclinavel_veludo_premium_azul_marinho_1234_1_20201028142912.jpg",
+      "image2": "https://images.tcdn.com.br/img/img_prod/697730/sofa_3_lugares_retratil_e_reclinavel_veludo_premium_azul_marinho_1234_2_20201028142912.jpg",
+      "image3": "https://images.tcdn.com.br/img/img_prod/697730/sofa_3_lugares_retratil_e_reclinavel_veludo_premium_azul_marinho_1234_3_20201028142912.jpg",
+      "image4": "https://images.tcdn.com.br/img/img_prod/697730/sofa_3_lugares_retratil_e_reclinavel_veludo_premium_azul_marinho_1234_4_20201028142912.jpg",
+      "description": "O Sofá 3 Lugares Retrátil e Reclinável em Veludo Premium oferece o máximo em conforto e sofisticação. Com estrutura robusta em madeira maciça e espuma D33, proporciona durabilidade e conforto excepcionais. O mecanismo retrátil e reclinável permite ajustar a posição ideal para relaxar. O revestimento em veludo premium é macio ao toque e possui tratamento antimanchas. Inclui almofadas soltas para maior comodidade e facilita a limpeza. Perfeito para salas de estar modernas e elegantes.",
+      "originalPrice": 2899.90,
+      "price": 2499.90,
+      "pixPrice": 2124.91,
+      "inStock": true,
+      "category": "Sofás",
+      "capacity": "3 Lugares",
+      "type": "Retrátil/Reclinável",
+      "material": "Veludo Premium",
+      "structure": "Madeira Maciça",
+      "foam": "D33",
+      "dimensions": "220x95x85cm"
+    },
+    {
+      "id": 16,
+      "productType": "Móveis",
+      "name": "Sofá 2 Lugares Fixo Linho Escandinavo",
+      "shortDescription": "Design moderno e minimalista",
+      "image1": "https://images.tcdn.com.br/img/img_prod/697730/sofa_2_lugares_fixo_linho_escandinavo_cinza_claro_5678_1_20201028142912.jpg",
+      "image2": "https://images.tcdn.com.br/img/img_prod/697730/sofa_2_lugares_fixo_linho_escandinavo_cinza_claro_5678_2_20201028142912.jpg",
+      "image3": "https://images.tcdn.com.br/img/img_prod/697730/sofa_2_lugares_fixo_linho_escandinavo_cinza_claro_5678_3_20201028142912.jpg",
+      "image4": "https://images.tcdn.com.br/img/img_prod/697730/sofa_2_lugares_fixo_linho_escandinavo_cinza_claro_5678_4_20201028142912.jpg",
+      "description": "O Sofá 2 Lugares Fixo em Linho Escandinavo traz o melhor do design nórdico para sua casa. Com linhas clean e elegantes, é perfeito para ambientes modernos e minimalistas. A estrutura em eucalipto reflorestado garante sustentabilidade e durabilidade. O assento em espuma D28 proporciona conforto adequado para uso diário. O tecido em linho natural é respirável e possui textura agradável. Pés em madeira maciça completam o visual sofisticado. Ideal para salas compactas e apartamentos modernos.",
+      "originalPrice": 1599.90,
+      "price": 1299.90,
+      "pixPrice": 1104.91,
+      "inStock": true,
+      "category": "Sofás",
+      "capacity": "2 Lugares",
+      "type": "Fixo",
+      "material": "Linho Natural",
+      "structure": "Eucalipto Reflorestado",
+      "foam": "D28",
+      "dimensions": "150x80x75cm"
+    },
+    {
+      "id": 17,
+      "productType": "Móveis",
+      "name": "Sofá Chaise 4 Lugares Couro Sintético Premium",
+      "shortDescription": "Luxo e conforto em formato L",
+      "image1": "https://images.tcdn.com.br/img/img_prod/697730/sofa_chaise_4_lugares_couro_sintetico_premium_marrom_9101_1_20201028142912.jpg",
+      "image2": "https://images.tcdn.com.br/img/img_prod/697730/sofa_chaise_4_lugares_couro_sintetico_premium_marrom_9101_2_20201028142912.jpg",
+      "image3": "https://images.tcdn.com.br/img/img_prod/697730/sofa_chaise_4_lugares_couro_sintetico_premium_marrom_9101_3_20201028142912.jpg",
+      "image4": "https://images.tcdn.com.br/img/img_prod/697730/sofa_chaise_4_lugares_couro_sintetico_premium_marrom_9101_4_20201028142912.jpg",
+      "description": "O Sofá Chaise 4 Lugares em Couro Sintético Premium é a definição de luxo e conforto. Com formato em L, otimiza o espaço e oferece acomodação generosa. A estrutura interna é feita com madeira de reflorestamento e molas ensacadas para maior durabilidade. O revestimento em couro sintético premium possui textura macia e é fácil de limpar. Espuma D33 no assento e D23 no encosto garantem conforto ideal. Pés em aço inox escovado agregam modernidade. Perfeito para salas amplas e ambientes sofisticados.",
+      "originalPrice": 3999.90,
+      "price": 3299.90,
+      "pixPrice": 2804.91,
+      "inStock": true,
+      "category": "Sofás",
+      "capacity": "4 Lugares",
+      "type": "Chaise/L",
+      "material": "Couro Sintético Premium",
+      "structure": "Madeira + Molas Ensacadas",
+      "foam": "D33/D23",
+      "dimensions": "280x160x85cm"
+    },
+    {
+      "id": 18,
+      "productType": "Móveis",
+      "name": "Sofá Cama 3 Lugares com Baú Suede",
+      "shortDescription": "Funcionalidade e praticidade em um só móvel",
+      "image1": "https://images.tcdn.com.br/img/img_prod/697730/sofa_cama_3_lugares_com_bau_suede_verde_musgo_1213_1_20201028142912.jpg",
+      "image2": "https://images.tcdn.com.br/img/img_prod/697730/sofa_cama_3_lugares_com_bau_suede_verde_musgo_1213_2_20201028142912.jpg",
+      "image3": "https://images.tcdn.com.br/img/img_prod/697730/sofa_cama_3_lugares_com_bau_suede_verde_musgo_1213_3_20201028142912.jpg",
+      "image4": "https://images.tcdn.com.br/img/img_prod/697730/sofa_cama_3_lugares_com_bau_suede_verde_musgo_1213_4_20201028142912.jpg",
+      "description": "O Sofá Cama 3 Lugares com Baú em Suede é a solução perfeita para ambientes que precisam de versatilidade. Durante o dia funciona como sofá confortável e à noite se transforma em cama para hóspedes. O compartimento baú interno oferece espaço extra para guardar roupas de cama, cobertores ou outros itens. Estrutura em madeira de pinus tratado garante resistência. O tecido suede é macio, resistente e fácil de limpar. Mecanismo de abertura simples e seguro. Ideal para apartamentos, quitinetes e casas com espaço limitado.",
+      "originalPrice": 1899.90,
+      "price": 1599.90,
+      "pixPrice": 1359.91,
+      "inStock": true,
+      "category": "Sofás",
+      "capacity": "3 Lugares",
+      "type": "Cama/Baú",
+      "material": "Suede",
+      "structure": "Pinus Tratado",
+      "foam": "D26",
+      "dimensions": "195x90x80cm"
+    },
+    {
+      "id": 19,
+      "productType": "Móveis",
+      "name": "Sofá Modular 5 Lugares com Chaise Tecido Impermeável",
+      "shortDescription": "Sofá modular versátil com tecido tecnológico",
+      "image1": "https://images.tcdn.com.br/img/img_prod/697730/sofa_modular_5_lugares_chaise_tecido_impermeavel_cinza_grafite_2456_1_20201028142912.jpg",
+      "image2": "https://images.tcdn.com.br/img/img_prod/697730/sofa_modular_5_lugares_chaise_tecido_impermeavel_cinza_grafite_2456_2_20201028142912.jpg",
+      "image3": "https://images.tcdn.com.br/img/img_prod/697730/sofa_modular_5_lugares_chaise_tecido_impermeavel_cinza_grafite_2456_3_20201028142912.jpg",
+      "image4": "https://images.tcdn.com.br/img/img_prod/697730/sofa_modular_5_lugares_chaise_tecido_impermeável_cinza_grafite_2456_4_20201028142912.jpg",
+      "description": "O Sofá Modular 5 Lugares com Chaise é a revolução em flexibilidade e praticidade. Com módulos independentes, permite diferentes configurações conforme a necessidade do ambiente. O tecido impermeável com nanotecnologia repele líquidos e facilita a limpeza, sendo ideal para famílias com crianças e pets. Estrutura em madeira de eucalipto reflorestado e espuma D35 garantem durabilidade superior. Sistema de encaixe inteligente permite montar e desmontar facilmente. Inclui almofadas extras e manual de configurações. Perfeito para salas modernas e dinâmicas.",
+      "originalPrice": 4599.90,
+      "price": 3899.90,
+      "pixPrice": 3314.91,
+      "inStock": true,
+      "category": "Sofás",
+      "capacity": "5 Lugares",
+      "type": "Modular/Chaise",
+      "material": "Tecido Impermeável",
+      "structure": "Eucalipto Reflorestado",
+      "foam": "D35",
+      "dimensions": "320x180x88cm"
+    },
+    {
+      "id": 20,
+      "productType": "Móveis",
+      "name": "Sofá Retrô 2 Lugares Couro Legítimo Vintage",
+      "shortDescription": "Elegância vintage com couro legítimo envelhecido",
+      "image1": "https://images.tcdn.com.br/img/img_prod/697730/sofa_retro_2_lugares_couro_legitimo_vintage_marrom_caramelo_7890_1_20201028142912.jpg",
+      "image2": "https://images.tcdn.com.br/img/img_prod/697730/sofa_retro_2_lugares_couro_legitimo_vintage_marrom_caramelo_7890_2_20201028142912.jpg",
+      "image3": "https://images.tcdn.com.br/img/img_prod/697730/sofa_retro_2_lugares_couro_legitimo_vintage_marrom_caramelo_7890_3_20201028142912.jpg",
+      "image4": "https://images.tcdn.com.br/img/img_prod/697730/sofa_retro_2_lugares_couro_legitimo_vintage_marrom_caramelo_7890_4_20201028142912.jpg",
+      "description": "O Sofá Retrô 2 Lugares em Couro Legítimo Vintage é uma peça única que combina tradição e sofisticação. Confeccionado com couro bovino legítimo com acabamento vintage, desenvolve pátina natural com o tempo, tornando-se ainda mais belo. A estrutura artesanal em madeira nobre maciça garante durabilidade por gerações. Estofado com crina vegetal e espuma natural para conforto autêntico. Costuras reforçadas e acabamento manual impecável. Pés torneados em madeira maciça. Uma peça de investimento para ambientes clássicos e contemporâneos.",
+      "originalPrice": 3299.90,
+      "price": 2799.90,
+      "pixPrice": 2379.91,
+      "inStock": true,
+      "category": "Sofás",
+      "capacity": "2 Lugares",
+      "type": "Retrô/Fixo",
+      "material": "Couro Legítimo Vintage",
+      "structure": "Madeira Nobre Maciça",
+      "foam": "Crina Vegetal + Espuma Natural",
+      "dimensions": "160x85x78cm"
+    },
+    {
+      "id": 21,
+      "productType": "Móveis",
+      "name": "Sofá Escandinavo 3 Lugares com Puff Lã Bouclé",
+      "shortDescription": "Design nórdico contemporâneo com textura única",
+      "image1": "https://images.tcdn.com.br/img/img_prod/697730/sofa_escandinavo_3_lugares_puff_la_boucle_off_white_3456_1_20201028142912.jpg",
+      "image2": "https://images.tcdn.com.br/img/img_prod/697730/sofa_escandinavo_3_lugares_puff_la_boucle_off_white_3456_2_20201028142912.jpg",
+      "image3": "https://images.tcdn.com.br/img/img_prod/697730/sofa_escandinavo_3_lugares_puff_la_boucle_off_white_3456_3_20201028142912.jpg",
+      "image4": "https://images.tcdn.com.br/img/img_prod/697730/sofa_escandinavo_3_lugares_puff_la_boucle_off_white_3456_4_20201028142912.jpg",
+      "description": "O Sofá Escandinavo 3 Lugares com Puff em Lã Bouclé representa o ápice do design nórdico contemporâneo. O tecido bouclé em lã natural oferece textura única e conforto excepcional, sendo naturalmente antibacteriano e termorregulador. Estrutura minimalista em madeira de faia certificada FSC, com junções invisíveis e acabamento em óleo natural. Almofadas com plumas de ganso e espuma viscoelástica para máximo conforto. Inclui puff combinando que pode ser usado como apoio para pés ou assento extra. Sustentável e atemporal, ideal para ambientes sofisticados.",
+      "originalPrice": 5299.90,
+      "price": 4499.90,
+      "pixPrice": 3824.91,
+      "inStock": true,
+      "category": "Sofás",
+      "capacity": "3 Lugares",
+      "type": "Escandinavo/Fixo",
+      "material": "Lã Bouclé Natural",
+      "structure": "Faia Certificada FSC",
+      "foam": "Plumas de Ganso + Viscoelástica",
+      "dimensions": "210x95x82cm"
+    },
+    {
+      "id": 22,
+      "productType": "Móveis",
+      "name": "Sofá Recliner 3 Lugares Elétrico Massageador Premium",
+      "shortDescription": "Tecnologia avançada com massagem e aquecimento",
+      "image1": "https://images.tcdn.com.br/img/img_prod/697730/sofa_recliner_3_lugares_eletrico_massageador_premium_preto_8901_1_20201028142912.jpg",
+      "image2": "https://images.tcdn.com.br/img/img_prod/697730/sofa_recliner_3_lugares_eletrico_massageador_premium_preto_8901_2_20201028142912.jpg",
+      "image3": "https://images.tcdn.com.br/img/img_prod/697730/sofa_recliner_3_lugares_eletrico_massageador_premium_preto_8901_3_20201028142912.jpg",
+      "image4": "https://images.tcdn.com.br/img/img_prod/697730/sofa_recliner_3_lugares_eletrico_massageador_premium_preto_8901_4_20201028142912.jpg",
+      "description": "O Sofá Recliner 3 Lugares Elétrico Massageador Premium é o futuro do relaxamento doméstico. Cada assento possui motor elétrico silencioso para reclinação independente até 160°, porta USB para carregamento de dispositivos e sistema de massagem com 8 programas diferentes. Função aquecimento lombar com 3 níveis de intensidade. Revestimento em couro sintético premium com tratamento antibacteriano. Estrutura reforçada com aço e madeira, suportando até 150kg por lugar. Controle remoto individual por assento. Sistema de memória que salva posições favoritas. O máximo em conforto e tecnologia.",
+      "originalPrice": 6999.90,
+      "price": 5999.90,
+      "pixPrice": 5099.91,
+      "inStock": true,
+      "category": "Sofás",
+      "capacity": "3 Lugares",
+      "type": "Recliner/Elétrico",
+      "material": "Couro Sintético Premium",
+      "structure": "Aço + Madeira Reforçada",
+      "foam": "D40 + Memory Foam",
+      "dimensions": "220x100x105cm"
+    }
   ],
-  "categories": [
-    "Split Inverter",
-    "Multi Split",
-    "Cassete",
-    "Portátil"
-  ],
+  "categories": {
+    "Ar-condicionado": [
+      "Split Inverter",
+      "Multi Split", 
+      "Cassete",
+      "Portátil"
+    ],
+    "Móveis": [
+      "Sofás"
+    ]
+  },
   "capacities": {
     "Split Inverter": [
       "9.000 BTUs",
@@ -326,17 +525,44 @@
     ],
     "Portátil": [
       "12.000 BTUs"
+    ],
+    "Sofás": [
+      "2 Lugares",
+      "3 Lugares",
+      "4 Lugares"
     ]
   },
-  "brands": [
-    "Elgin",
-    "LG",
-    "Midea",
-    "Samsung",
-    "Springer Midea"
-  ],
-  "cycleTypes": [
-    "Frio",
-    "Quente e Frio"
-  ]
+  "brands": {
+    "Ar-condicionado": [
+      "Elgin",
+      "LG",
+      "Midea",
+      "Samsung",
+      "Springer Midea"
+    ],
+    "Móveis": [
+      "Casa & Conforto",
+      "Mobly",
+      "Tok&Stok",
+      "MadeiraMadeira"
+    ]
+  },
+  "specifications": {
+    "Ar-condicionado": [
+      "capacity",
+      "type", 
+      "technology",
+      "voltage",
+      "energyClass",
+      "wifi"
+    ],
+    "Móveis": [
+      "capacity",
+      "type",
+      "material", 
+      "structure",
+      "foam",
+      "dimensions"
+    ]
+  }
 }

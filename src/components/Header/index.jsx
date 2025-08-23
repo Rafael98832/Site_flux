@@ -458,13 +458,21 @@ const Header = () => {
           <NavList isOpen={mobileMenuOpen}>
             <DropdownItem>
               <DropdownButton>
-                Categorias <FaChevronDown />
+                Ar-condicionados <FaChevronDown />
               </DropdownButton>
               <DropdownMenu>
-                <DropdownLink to="/category/split-inverter/9000">9.000 BTUs</DropdownLink>
-                <DropdownLink to="/category/split-inverter/12000">12.000 BTUs</DropdownLink>
-                <DropdownLink to="/category/split-inverter/18000">18.000 BTUs</DropdownLink>
-                <DropdownLink to="/category/split-inverter/24000">24.000 BTUs</DropdownLink>
+                <DropdownLink to="/category/ar-condicionado/9000">9.000 BTUs</DropdownLink>
+                <DropdownLink to="/category/ar-condicionado/12000">12.000 BTUs</DropdownLink>
+                <DropdownLink to="/category/ar-condicionado/18000">18.000 BTUs</DropdownLink>
+                <DropdownLink to="/category/ar-condicionado/24000">24.000 BTUs</DropdownLink>
+              </DropdownMenu>
+            </DropdownItem>
+            <DropdownItem>
+              <DropdownButton>
+                Móveis <FaChevronDown />
+              </DropdownButton>
+              <DropdownMenu>
+                <DropdownLink to="/category/moveis/sofa">Sofás</DropdownLink>
               </DropdownMenu>
             </DropdownItem>
             <NavItem>
